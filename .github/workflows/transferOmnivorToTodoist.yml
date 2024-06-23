@@ -1,27 +1,27 @@
-on:
-  schedule:
-    - cron: '0 0 * * *'
+# on:
+#   schedule:
+#     - cron: '0 0 * * *'
 
-jobs:
-  run-go-program:
-    runs-on: ubuntu-latest
+# jobs:
+#   run-go-program:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
 
-      - name: Set up Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: '1.17'
+#       - name: Set up Go
+#         uses: actions/setup-go@v3
+#         with:
+#           go-version: '1.17'
 
-      - name: Buld Fetch and transfer program
-        run: echo start building the program...
+#       - name: Buld Fetch and transfer program
+#         run: echo start building the program...
 
-      - name: Build and run Go program
-        run: |
-          go build -o myprogram main.go
-          ./myprogram
+#       - name: Build and run Go program
+#         run: |
+#           go build -o myprogram main.go
+#           ./myprogram
 
-      - name: Done
-        run: echo Done!!!
+#       - name: Done
+#         run: echo Done!!!
